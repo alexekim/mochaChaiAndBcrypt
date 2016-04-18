@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
 // this connects us to our database
-var connectionString = 'mongodb://localhost/mochaTestDb';
+// var connectionString = 'mongodb://localhost/mochaTestDb';
+// caps = final, constant, important!!!!!
+var connectionString = process.env.DB_HOST;
 console.log('Attempting to connect to MongoDB');
 
 mongoose.connect(connectionString); // connect to the db supplied in the connectionString
